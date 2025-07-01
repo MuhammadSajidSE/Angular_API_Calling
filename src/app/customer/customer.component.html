@@ -1,0 +1,46 @@
+<h1 [ngClass]="'mainHeading'">CUSTOMER DETAILS</h1>
+<div class="inputRow">
+    <input type="text" class="inputData" placeholder="Id" #id>
+    <input type="text" class="inputData" placeholder="Name" #name>
+    <input type="text" class="inputData" placeholder="Address" #address>
+    <input type="text" class="inputData" placeholder="City" #city>
+    <input type="text" class="inputData" placeholder="Phone No" #phoneno>
+    <input type="text" class="inputData" placeholder="Age" #age>
+    <input type="text" class="inputData" placeholder="NIC" #nic>
+</div>
+<div class="buttonrow">
+    <button class="buttons" style="background-color: green;" (click)="insertdata(id.value,name.value,address.value,city.value,phoneno.value,age.value,nic.value)">Insert</button>
+    <button class="buttons" style="background-color: red;" (click)="DeleteCustomer(id.value)">Delete</button>
+    <button class="buttons" style="background-color: palevioletred;" (click)="UpdateData(id.value,name.value,address.value,city.value,phoneno.value,age.value,nic.value)">Update</button>
+    <button class="buttons" style="background-color: purple;" (click)="PartialUpdateData(id.value,name.value,address.value,city.value,phoneno.value,age.value,nic.value)">Patch</button>
+    <button class="buttons" style="background-color: orange;" (click)="searchbyname(name.value)">Search</button>
+    <button class="buttons" style="background-color: skyblue;"  (click)="Getdata()">Show</button>
+<button class="buttons" style="background-color: rgb(230, 104, 255);" 
+  (click)="clearData(id, name, address, city, phoneno, age, nic)">Clear</button>
+</div>
+<div>
+  <table >
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>ADDRESS</th>
+        <th>CITY</th>
+        <th>PHONE NO</th>
+        <th>AGE</th>
+        <th>NIC</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customerlist">
+        <td>{{customer["id"]}}</td>
+        <td>{{customer["name"]}}</td>
+        <td>{{customer["address"]}}</td>
+        <td>{{customer["city"]}}</td>
+        <td>{{customer["phone"]}}</td>
+        <td>{{customer["nic"]}}</td>
+        <td>{{customer["phone"]}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

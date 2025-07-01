@@ -1,0 +1,43 @@
+.mainHeading{
+    color: rgb(117, 220, 185);
+    text-align: center;
+    
+}
+.inputData{
+    margin-left: 10px;
+    font-size: 15px;
+    padding-left: 10px;
+    height: 30px;
+}
+.inputRow{
+    margin-left: 50px;
+}
+.buttonrow{
+    margin-top: 25px;
+    margin-left: 200px;
+}
+.buttons{
+    border-radius: 5px;
+    margin-left: 20px;
+    width: 150px;
+    height: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    border: none;
+}
+    table {
+        font-size: 20px;
+        margin-left: 60px;
+        margin-top: 20px;
+    }
+
+    th{
+        background-color: aquamarine;
+        width: 200px;
+    }
+    tr{
+        background-color: rgb(230, 217, 255);
+        width: 200px;
+        text-align: center;
+    }

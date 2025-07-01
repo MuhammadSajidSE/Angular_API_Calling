@@ -1,0 +1,53 @@
+<!-- <input #inputName type="text" (input)="Filter(inputName.value)"> -->
+<div style="margin-left: 15%; font-size: 20px;">
+    <!-- <button (click)="FilterUser()">Filter User</button> -->
+<table width="1000">
+    <tr>
+        <th>
+            User id
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Phone No
+        </th>
+        <th>
+            NIC
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+            Image Url
+        </th>
+    </tr>
+    <tr *ngFor="let User of Users">
+        <td>
+            {{User["id"]}}
+        </td>
+        <td>
+            {{User["userName"]}}
+        </td>
+        <td>
+            {{User["email"]}}
+        </td>
+        <td>
+            {{User["phoneNumber"]}}
+        </td>
+        <td>
+            {{User["nic"]}}
+        </td>
+        <td>
+            {{User["address"]}}
+        </td>
+        <td>
+            <img src="{{User['imageUrl']}}" alt="Profile Picture" width="80" height="80" style="border-radius: 50%;">
+
+        </td>
+    </tr>
+</table>
+</div>
